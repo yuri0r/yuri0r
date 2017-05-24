@@ -1,17 +1,19 @@
 /*such responsive much wow*/
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .row::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 [class*="col-"] {
-    float: left;
-    padding: 15px;
+  float: left;
+  padding-left: 0px;
+  padding-right: 0px;
+  
 }
 
 .col-1 {width: 8.33%;}
@@ -27,14 +29,21 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-body {
-  background-color: black;
-  margin: 25px 25px 25px 25px;
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
 }
 
-h1, p, a{
+body {
+  background-color: black;
+  margin: 1em 2em 1em 2em;
+  font-size: 1.2em;
   font-family: 'Roboto', sans-serif;
-  color: lime;
+  color:lime;
+  max-width: 70em;
+  line-height: 1.3;
 }
 
 h1 {
@@ -43,7 +52,7 @@ h1 {
 
 a {
   color: magenta;
-  text-decoration:none;
+  text-decoration: none;
 }
 
 a:hover{
@@ -51,6 +60,6 @@ a:hover{
   background-color: lime;
 }
 
-#findMe {
-  background-color:white;
+ul {
+  list-style: none;
 }
