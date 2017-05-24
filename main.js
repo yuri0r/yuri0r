@@ -10,7 +10,7 @@ http.createServer(app).listen(3000);
 app.use(express.static(__dirname +'/public'));
 
 app.get("/", function(req, res) {
-  ress.send("hey");	
+  res.send("hey");
 })
 
 
