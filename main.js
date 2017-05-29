@@ -1,9 +1,22 @@
 var express = require("express");
 var url = require("url");
 var http = require("http");
+var https = require('https');
+var fs = require('fs');
 var app;
 
 app = express();
+
+var options = {
+  key: fs.readFileSync('/etc/letsencrypt/live/yurinullr.ddns.net/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/yurinullr.ddns.net/cert.pem'),
+  ca: fs.readFileSync('/etc/letsencrypt/live/yurinullr.ddns.net/chain.pem')}
+
+https.createServer(options, function (req, res) {
+  res.writeHead(200);
+  res.end("hello world\n");
+}).listen(443);
+
 http.createServer(app).listen(3000);
 
 //making static files availeble
