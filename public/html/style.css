@@ -53,6 +53,8 @@ h1 {
 a {
   color: magenta;
   text-decoration: none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
 
 a:hover{
@@ -62,4 +64,24 @@ a:hover{
 
 ul {
   list-style: none;
+  margin:0;
+  padding: 0;
+}
+
+.findMeMenu {
+  background-color: #fd;
+}
+
+.button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  display:block;
+  border: 2px solid lime;  
+  margin: 2px 0px 2px 0px;
+}
+
+}
+.button:hover {
+  background-color: lime;
+  color: black;
 }
