@@ -9,9 +9,9 @@ var fs = require('fs');
 http = require('http');
 
 var options = {
-  key: fs.readFileSync('/etc/letsencrypt/live/yurinullr.ddns.net/privkey.pem'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/yurinullr.ddns.net/cert.pem'),
-  ca: fs.readFileSync('/etc/letsencrypt/live/yurinullr.ddns.net/chain.pem')
+  key: fs.readFileSync('/etc/letsencrypt/live/yuri0r.ddns.net/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/yuri0r.ddns.net/cert.pem'),
+  ca: fs.readFileSync('/etc/letsencrypt/live/yuri0r.ddns.net/chain.pem')
 }
 //https server
 https.createServer(options, httpsApp).listen(443);
