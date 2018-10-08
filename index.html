@@ -61,40 +61,48 @@ Only shooting stars break the mold
 And all that glitters is gold
 Only shooting stars break the mold -->
 <head>
-    <meta charset="UTF-8">
-    <!-- shall help with responsive design-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>yuri's website</title>
-    <link rel="stylesheet" type="text/css" href="html/style.css">
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+  <meta charset="UTF-8">
+  <!-- shall help with responsive design-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>yuri's website</title>
+  <link rel="stylesheet" type="text/css" href="html/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
 </head>
 
 <body>
-<div>
-    <h1 class=col-12>Hello world :3</h1>
-    <div class="row">
-        <div id="welcomeText" class="col-9">
-            <p>
-                Welcome to my small Webserver.
-                My name is Yuri and I have no idea what exactly this Server is going to be supposed to do, but i surely
-                will figure something out.
-                In case u are wondering, this website is running on an
-                <a href="https://www.raspberrypi.org/products/model-b/" target=”_blank">raspberry pi</a>
-                utilising <a href="https://www.lighttpd.net/" target=”_blank”>lighttpd</a>.
-            </p>
-        </div>
 
-        <div class="col-3">
-            <ul class="findMeMenu">
-                <li class="button"><b>find me on</b></li>
-                <li><a class="button" href="https://twitter.com/yuri0r" target=”_blank”>Twitter</a></li>
-                <li><a class="button" href="https://github.com/yuri0r" target=”_blank”>Github</a></li>
-                <li><a class="button" href="html/blog.html">Blog</a></li>
-            </ul>
-        </div>
-    </div>
+<div class="grid-container">
+  <div class=welcomeText>
+    <h1 style=>Hello world :3</h1>
+    <h1 class="secret" style=>( ͡° ͜ʖ ͡°)</h1>
+    <p style="width: fit-content">
+      Welcome to my small Web Server.
+      My name is Yuri and I have no idea what exactly this Server is going to be supposed to do,
+      but i surely will figure something out.
+      In case u are wondering, this website is running on an
+      <a href="https://www.raspberrypi.org/products/model-b/" target=”_blank">raspberry pi</a>
+      utilising <a href="https://www.lighttpd.net/" target=”_blank”>lighttpd</a>.
+    </p>
+  </div>
+
+  <div class="findMeMenu">
+    <b class="button">find me on</b>
+    <a class="button" href="https://twitter.com/yuri0r" target=”_blank”>Twitter</a>
+    <a class="button" href="https://github.com/yuri0r" target=”_blank”>Github</a>
+    <a class="button" href="html/blog.html">Blog</a>
+  </div>
 </div>
+
+<div class="content-container">
+  <div class="contentCard">example </div>
+  <div class="contentCard">example </div>
+  <div class="contentCard">example </div>
+  <div class="contentCard">example </div>
+  <div class="contentCard">example </div>
+</div>
+
 </body>
 
 <script>
