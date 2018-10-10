@@ -1,0 +1,104 @@
+/*such responsive much wow*/
+.secret {
+  display: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: auto auto auto;
+  margin: 1em 1em 2em;
+}
+
+.content-container {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: auto auto auto;
+  margin: 1em 1em 2em;
+}
+
+body {
+  background-color: black;
+  margin:auto;
+  max-width: 70%;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+  color: lime;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+a {
+  color: magenta;
+  text-decoration: none;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+a:hover {
+  color: black;
+  background-color: lime;
+}
+
+.welcomeText {
+  grid-column: span 2;
+}
+
+.findMeMenu {
+  background-color: transparent;
+  grid-column: span 1;
+  }
+
+.button {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  display: block;
+  border: 2px solid lime;
+  padding: .5em;
+  margin-bottom: -2px;
+  }
+
+.button:hover {
+  background-color: lime;
+  color: black;
+}
+
+.contentCard {
+  display: block;
+  border: 2px solid lime;
+  padding: .5em;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .welcomeText {
+    grid-column: span 1;
+  }
+
+  .findMeMenu {
+    float: bottom;
+  }
+
+  .grid-container {
+    grid-template-columns: 100%;
+  }
+
+  .content-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+  @media only screen and (width: 1337px) {
+    /* For mobile easter egg's: */
+    h1 {
+      display: none;
+    }
+
+    .secret {
+      display: initial;
+    }
+
+}
