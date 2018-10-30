@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE X3D PUBLIC "ISO//Web3D//DTD X3D 3.3//EN"
+        "http://www.web3d.org/specifications/x3d-3.3.dtd">
+
+<X3D profile="Interchange" version="3.3"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance"
+     xsd:noNamespaceSchemaLocation="http://www.web3d.org/specifications/x3d-3.3.xsd">
+    <Scene>
+        <Transform translation="-4 0 -20" rotation="0 1 0 .2">
+            <Transform rotation="0 1 1 1.4">
+                <Group DEF="trma1024_57099">
+                    <Shape DEF="body">
+                        <Appearance>
+                            <ImageTexture url="textures/mouth.png"/>
+                            <Material diffuseColor='1 1 1'></Material>
+                        </Appearance>
+                        <Cylinder
+                                height="3"
+                                radius="2"/>
+                    </Shape>
+
+                    <Transform translation="0 -1.5 0">
+                        <Shape DEF="bottom">
+                            <Appearance>
+                                <ImageTexture url="textures/jeans.jpg"/>
+                            </Appearance>
+                            <Sphere radius="2"/>
+                        </Shape>
+                    </Transform>
+
+                    <Transform translation="0 1.5 0">
+                        <Shape DEF="head">
+                            <Appearance>
+                                <Material diffuseColor='1 1 0'/>
+                            </Appearance>
+                            <Sphere radius='2'/>
+                        </Shape>
+
+                        <Shape DEF="headband">
+                            <Appearance>
+                                <Material diffuseColor="0.2 0.2 0.2"/>
+                            </Appearance>
+                            <Cylinder
+                                    radius="2.1"
+                                    height="0.6"/>
+                        </Shape>
+
+                        <Transform translation='0 0 1.8'>
+                            <Shape DEF="eye">
+                                <Appearance>
+                                    <Material diffuseColor="1 1 1"/>
+                                    <ImageTexture url="textures/eye.png"/>
+                                </Appearance>
+                                <Sphere radius='.6'/>
+                            </Shape>
+
+                            <Transform translation="0 0 0.1"
+                                       rotation="1 0 0 1.57">
+                                <Shape DEF="eyeband">
+                                    <Appearance>
+                                        <Material diffuseColor="0.5 0.5 0.5"/>
+                                    </Appearance>
+                                    <Cylinder
+                                            radius=".72"
+                                            height="0.5"
+                                    />
+                                </Shape>
+                            </Transform>
+                        </Transform>
+                    </Transform>
+
+
+                    <Transform translation='1 -4 0'>
+                        <Group DEF="leg_shoe">
+                            <Shape DEF="leg">
+                                <Appearance>
+                                    <ImageTexture url="textures/jeans.jpg"/>
+                                </Appearance>
+                                <Cylinder
+                                        radius="0.2"
+                                />
+                            </Shape>
+
+                            <Transform translation="0 -1 0.2">
+                                <Shape DEF="shoe">
+                                    <Appearance>
+                                        <Material diffuseColor="0.2 0.2 0.2"/>
+                                    </Appearance>
+                                    <Box size="0.5 0.5 0.9"/>
+                                </Shape>
+                            </Transform>
+                        </Group>
+                        <Transform translation='-2 0 0'>
+                            <Group USE="leg_shoe"/>
+                        </Transform>
+                    </Transform>
+
+                    <Transform translation="0 1 0">
+                        <Transform translation="-2.9 0 0 " rotation="0 0 1 0.785">
+                            <Group DEF="arm_hand">
+                                <Shape DEF="arm">
+                                    <Appearance>
+                                        <Material diffuseColor="1 1 0"/>
+                                    </Appearance>
+                                    <Cylinder
+                                            height="3.1"
+                                            radius=".2"/>
+                                </Shape>
+
+                                <Transform translation="0 1.55 0">
+                                    <Shape DEF="hand">
+                                        <Appearance>
+                                            <Material diffuseColor="0.2 0.2 0.2"/>
+                                        </Appearance>
+                                        <Sphere radius=".4"/>
+                                    </Shape>
+                                    <Group DEF="finger">
+                                        <Transform translation="0 0.5 0">
+                                            <Shape>
+                                                <Appearance>
+                                                    <Material diffuseColor="0.2 0.2 0.2"/>
+                                                </Appearance>
+                                                <Cylinder radius=".15"
+                                                          height="0.4"/>
+                                            </Shape>
+                                            <Transform translation="0 0.2 0">
+                                                <Shape DEF="finger_cup">
+                                                    <Appearance>
+                                                        <Material diffuseColor="0.2 0.2 0.2"/>
+                                                    </Appearance>
+                                                    <Sphere radius=".15"/>
+                                                </Shape>
+                                            </Transform>
+                                        </Transform>
+                                    </Group>
+                                    <Transform rotation="0 0 1 .4">
+                                        <Group USE="finger"/>
+                                        <Transform rotation="0 0 1 -0.785">
+                                            <Group USE="finger"/>
+                                        </Transform>
+                                    </Transform>
+                                </Transform>
+                            </Group>
+                        </Transform>
+
+                        <Transform translation="2.9 0 0 " rotation="0 0 -1 0.785">
+                            <Group USE="arm_hand"/>
+                        </Transform>
+                    </Transform>
+                </Group>
+            </Transform>
+
+            <Transform translation="8 1 2" rotation="0 1 0 -1.4">
+                <Group DEF="robert">
+
+                    <Transform translation='0 2.5 0'>
+                        <Shape>
+                            <Sphere radius='2'/>
+                            <Appearance>
+                                <ImageTexture url="textures/skin.png"/>
+                                <Material diffuseColor='0.9 0.9 0'/>
+                            </Appearance>
+                        </Shape>
+                    </Transform>
+                    <!-- Goggles Band -->
+                    <Transform translation='0 2 0'>
+                        <Shape>
+                            <Cylinder radius='2.1' height='1'/>
+                            <Appearance>
+                                <Material diffuseColor='0.2 0.2 0.2'/>
+                            </Appearance>
+                        </Shape>
+                    </Transform>
+                    <!-- Left Eye -->
+                    <Transform translation='-0.6 2 1.7'>
+                        <Shape>
+                            <Sphere radius='0.5'/>
+                            <Appearance>
+                                <ImageTexture url='textures/eye.png'/>
+                            </Appearance>
+                        </Shape>
+                    </Transform>
+                    <!-- Left Eye Goggle -->
+                    <Transform translation='-0.6 2 1.85' rotation='1 0 0 1.57'>
+                        <Shape>
+                            <Cylinder radius='0.6' height='0.5'/>
+                            <Appearance>
+                                <Material diffuseColor='0.4 0.4 0.4'/>
+                            </Appearance>
+                        </Shape>
+                    </Transform>
+                    <!-- Right Eye -->
+                    <Transform translation='0.6 2 1.7'>
+                        <Shape>
+                            <Sphere radius='0.5'/>
+                            <Appearance>
+                                <ImageTexture url='textures/eye.png'/>
+                            </Appearance>
+                        </Shape>
+                    </Transform>
+                    <!-- Right Eye Goggle -->
+                    <Transform translation='0.6 2 1.85' rotation='1 0 0 1.57'>
+                        <Shape>
+                            <Cylinder radius='0.6' height='0.5'/>
+                            <Appearance>
+                                <Material diffuseColor='0.4 0.4 0.4'/>
+                            </Appearance>
+                        </Shape>
+                    </Transform>
+                    <!-- Body -->
+                    <Shape>
+                        <Cylinder height='5' radius='2'/>
+                        <Appearance>
+                            <ImageTexture url='textures/pants_top.png'/>
+                            <Material diffuseColor="1 1 0"/>
+                        </Appearance>
+                    </Shape>
+                    <!-- Left Arm -->
+                    <Transform translation='-2.25 0 1.5' rotation='1 -0.2 0 1.57'>
+                        <Shape>
+                            <Cylinder height='3' radius='0.25'/>
+                            <Appearance>
+                                <Material diffuseColor='1 1 0'/>
+                            </Appearance>
+                        </Shape>
+                        <Transform translation="0 1.5 0" rotation="1 .2 0 .2">
+                            <Shape>
+                                <Appearance>
+                                    <Material diffuseColor="1 1 0"/>
+                                </Appearance>
+                                <Sphere radius=".5"/>
+                            </Shape>
+                            <Shape>
+                                <Appearance>
+                                    <Material diffuseColor="0.6 0.6 0.6"/>
+                                </Appearance>
+                                <Box size="0.5 0.5 2"/>
+                            </Shape>
+                            <Transform translation="0 0.8 -1" rotation="1 0 0 1.5">
+                                <Shape>
+                                    <Appearance>
+                                        <Material diffuseColor="0.6 0.6 0.6"/>
+                                    </Appearance>
+                                    <Box size="0.6 0.5 2"/>
+                                </Shape>
+                            </Transform>
+                        </Transform>
+
+                    </Transform>
+                    <!-- Right Arm -->
+                    <Transform translation='3 1 0' rotation='0 0 -1 0.79'>
+                        <Shape>
+                            <Cylinder height='3' radius='0.25'/>
+                            <Appearance>
+                                <Material diffuseColor='0.9 0.9 0'/>
+                            </Appearance>
+                        </Shape>
+                    </Transform>
+                    <!-- Butt -->
+                    <Transform translation='0 -2.5 0'>
+                        <Shape>
+                            <Sphere radius='2'/>
+                            <Appearance>
+                                <ImageTexture url='textures/pants_bottom.png'/>
+                                <Material diffuseColor="0 0 1"/>
+                            </Appearance>
+                        </Shape>
+                    </Transform>
+                    <!-- Left Leg -->
+                    <Transform translation='-1 -4.9 0'>
+                        <Shape>
+                            <Cylinder height='2' radius='0.4'/>
+                            <Appearance>
+                                <ImageTexture url='textures/pants_leg.png'/>
+                                <Material diffuseColor="1 1 0"/>
+                            </Appearance>
+                        </Shape>
+                    </Transform>
+                    <!-- Right Leg -->
+                    <Transform translation='1 -4.9 0'>
+                        <Shape>
+                            <Cylinder height='2' radius='0.4'/>
+                            <Appearance>
+                                <ImageTexture url='textures/pants_leg.png'/>
+                                <Material diffuseColor="1 1 0"/>
+                            </Appearance>
+                        </Shape>
+                    </Transform>
+                </Group>
+            </Transform>
+        </Transform>
+    </Scene>
+</X3D>
