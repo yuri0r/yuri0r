@@ -67,9 +67,16 @@ a:hover {
 }
 
 .contentCard {
+   -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
   display: block;
   border: 2px solid lime;
   padding: .5em;
+}
+
+.contentCard:hover {
+  background-color: lime;
+  color: black;
 }
 
 @media only screen and (max-width: 768px) {
