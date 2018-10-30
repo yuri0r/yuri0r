@@ -20,7 +20,7 @@
 body {
   background-color: black;
   margin:auto;
-  max-width: 70%;
+  max-width: 60%;
   font-size: 1.2em;
   font-family: 'Roboto', sans-serif;
   color: lime;
@@ -89,6 +89,15 @@ a:hover {
   .content-container {
     grid-template-columns: auto auto;
   }
+
+  html {
+    margin: 0px;
+  }
+
+  body {
+    max-width: 95%;
+  }
+
 }
 
   @media only screen and (width: 1337px) {
