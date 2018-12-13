@@ -24,7 +24,7 @@
                             <Appearance>
                                 <ImageTexture url="textures/jeans.jpg"/>
                             </Appearance>
-                            <Sphere radius="2"/>
+                            <Sphere radius="1.99"/>
                         </Shape>
                     </Transform>
 
@@ -33,7 +33,7 @@
                             <Appearance>
                                 <Material diffuseColor='1 1 0'/>
                             </Appearance>
-                            <Sphere radius='2'/>
+                            <Sphere radius='1.99'/>
                         </Shape>
 
                         <Shape DEF="headband">
