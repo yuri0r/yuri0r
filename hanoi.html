@@ -19,32 +19,30 @@
 
 
 
-    async function go() {
+    function go() {
         n = parseInt(prompt("wie viele scheiben sollen es sein?"))
 
         for (i = n; i > 0; i--) {
             stab[0].push(i)
         }
 
-        console.log(stab);
-        await draw()
-        await h(n, 0, 1, 2)
-        console.log(stab);
+
+        draw()
+        h(n, 0, 1, 2)
     }
 
-    async function h(n, from, to, via) {
+    function h(n, from, to, via) {
 
         if (n == 0) return;
-        await h(n - 1, from, via, to);
-        //console.log("von " + from, "nach " + to);
-        await move(from, to, stab)
-        await h(n - 1, via, to, from);
+        h(n - 1, from, via, to);
+
+        move(from, to, stab)
+        h(n - 1, via, to, from);
     }
 
-    async function move(from, to, stab) {
+    function move(from, to, stab) {
         stab[to].push(stab[from].pop())
-        await sleep(400)
-        await draw()
+        setTimeout(draw(),400)
     }
 
     function draw() {
@@ -66,9 +64,7 @@
             }
         }
     }
-    function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-    }
+
     go()
 </script>
 </html>
