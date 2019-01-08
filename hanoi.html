@@ -40,7 +40,7 @@
 
     async function move(from, to, stab) {
         stab[to].push(stab[from].pop())
-        await sleep(100)
+        await sleep(50)
         await draw()
     }
 
