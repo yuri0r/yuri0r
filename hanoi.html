@@ -19,6 +19,12 @@
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
 
+    var url_string = window.location.href
+    var url = new URL(url_string);
+    var ms = url.searchParams.get("s");
+    ms = isNaN(ms) ? 50 : ms;
+    console.log(ms)
+
     function go() {
         n = parseInt(prompt("wie viele scheiben sollen es sein?"))
         canvas.width = 3 * boxlenght * n + 6 * boxlenght
@@ -40,7 +46,7 @@
 
     async function move(from, to, stab) {
         stab[to].push(stab[from].pop())
-        await sleep(50)
+        await sleep(ms)
         await draw()
     }
 
