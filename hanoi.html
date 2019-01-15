@@ -22,7 +22,7 @@
     var url_string = window.location.href
     var url = new URL(url_string);
     var ms = url.searchParams.get("s");
-    ms = isNaN(ms) ? 50 : ms;
+    ms = (isNaN(ms) || ms === null) ? 50 : ms;
     console.log(ms)
 
     function go() {
