@@ -22,11 +22,13 @@
     var url_string = window.location.href
     var url = new URL(url_string);
     var ms = url.searchParams.get("s");
+    var n = url.searchParams.get("b");
     ms = (isNaN(ms) || ms === null) ? 50 : ms;
     console.log(ms)
 
     function go() {
-        n = parseInt(prompt("wie viele scheiben sollen es sein?"))
+        if (isNaN(n) || n===null) n = parseInt(prompt("wie viele scheiben sollen es sein?"));
+
         canvas.width = 3 * boxlenght * n + 6 * boxlenght
         canvas.height = boxlenght * n
 
